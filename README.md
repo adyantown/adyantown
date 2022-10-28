@@ -1,3 +1,3 @@
 - 👋 Hi, I’m @adyantown
-- 👀 I'm a Self-taught developer that interest in front-end development
+- 👀 I'm a Self-taught developer that currently interest in web development related topics.
 - 🌱 Currently, I use git hub to track my learning process so far, but of course, if I have succeeded to create something I will put it here as well 😁
