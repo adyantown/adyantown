@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen font-sans text-gray-900">
+
+    <%- include('partials/navbar') %>
+
+        <main class="flex-grow max-w-6xl mx-auto px-4 py-16 w-full">
+
+            <div class="mb-12 border-b border-gray-200 pb-6 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-tight">
+                    Proyek & Karya</h1>
+                <p class="text-lg text-gray-600 max-w-2xl">
+                    Kumpulan portofolio dari aplikasi web, desktop, hingga eksplorasi desain yang
+                    telah saya bangun untuk memberikan solusi nyata.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    <div
+                        class="h-48 bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors duration-300">
+                        <span
+                            class="text-gray-400 font-bold tracking-widest uppercase text-sm">E-Perjadin
+                            Web</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">E-Perjadin</h2>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Aplikasi berbasis web untuk digitalisasi dan monitoring administrasi
+                            perjalanan dinas. Dibangun menggunakan arsitektur modular MVC dengan
+                            rute yang terstruktur rapi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Node.js</span>
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Express</span>
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Tailwind
+                                CSS</span>
+                        </div>
+                        <a href="#"
+                            class="text-black font-semibold text-sm hover:text-gray-500 transition duration-300 mt-auto inline-flex items-center">
+                            Lihat Detail <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    <div
+                        class="h-48 bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors duration-300">
+                        <span
+                            class="text-gray-400 font-bold tracking-widest uppercase text-sm">Python
+                            Tracker</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Expense Tracker App</h2>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Aplikasi desktop untuk melacak pengeluaran, anggaran bulanan, dan
+                            pencatatan transaksi kantor. Dibekali dengan Graphical User Interface
+                            (GUI) yang disesuaikan dengan identitas instansi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Python</span>
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Tkinter</span>
+                        </div>
+                        <a href="#"
+                            class="text-black font-semibold text-sm hover:text-gray-500 transition duration-300 mt-auto inline-flex items-center">
+                            Lihat Detail <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    <div
+                        class="h-48 bg-black flex items-center justify-center transition-opacity duration-300 group-hover:opacity-90">
+                        <span
+                            class="text-white font-bold tracking-widest uppercase text-sm">Fraghead13</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Fraghead13 Store</h2>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Proyek e-commerce dan pengembangan identitas merek (branding) toko
+                            parfum online, termasuk desain visual logo dan banner bernuansa monokrom
+                            yang kuat.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">E-commerce</span>
+                            <span
+                                class="px-3 py-1 bg-black text-white text-xs font-semibold rounded-full">Design</span>
+                        </div>
+                        <a href="#"
+                            class="text-black font-semibold text-sm hover:text-gray-500 transition duration-300 mt-auto inline-flex items-center">
+                            Lihat Detail <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <%- include('partials/footer') %>
+
+</body>
+
+</html>
