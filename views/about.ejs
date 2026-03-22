@@ -2,28 +2,25 @@
 
     <%- include('partials/navbar') %>
 
-        <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full flex items-center">
+        <main class="flex-grow max-w-5xl mx-auto px-4 py-16 w-full flex flex-col gap-12">
+
             <div
                 class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row w-full">
-
                 <div
                     class="md:w-2/5 bg-gray-100 flex flex-col items-center justify-center p-12 border-b md:border-b-0 md:border-r border-gray-200">
                     <img src="/images/profil.jpg" alt="Foto Profil Adyanto W. Nugroho"
                         class="w-48 h-48 rounded-full border-4 border-white shadow-md mb-6 object-cover">
-
-                    <h2 class="text-xl font-bold text-black text-center">Adyanto Wahyudhi N,
-                        S.Kom
+                    <h2 class="text-xl font-bold text-black text-center">Adyanto W Nugroho, S.Kom
                     </h2>
                     <p class="text-sm text-gray-500 mt-1">Penata Kelola Sistem Dan Teknologi
-                        Informasi</p>
+                        Informasi </p>
                 </div>
 
                 <div class="md:w-3/5 p-10 md:p-12 flex flex-col justify-center">
                     <h1 class="text-3xl md:text-4xl font-extrabold text-black mb-6 tracking-tight">
                         Tentang Saya</h1>
 
-                    <div class="space-y-4 text-gray-600 leading-relaxed text-justify">
-
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
                         <p>
                             Halo! Saat ini saya mengemban amanah sebagai <strong>Penata Kelola
                                 Sistem dan Teknologi Informasi</strong> di <strong>Komisi Pemilihan
@@ -53,6 +50,7 @@
                             terasa
                             lebih cepat, dan sangat menyenangkan 😁.
                         </p>
+
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-gray-100">
@@ -62,8 +60,66 @@
                         </a>
                     </div>
                 </div>
-
             </div>
+
+            <div class="w-full">
+                <h2
+                    class="text-2xl font-extrabold text-black mb-6 tracking-tight flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path
+                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+                        </path>
+                    </svg>
+                    Riwayat Pendidikan
+                </h2>
+
+                <div class="space-y-4">
+                    <div
+                        class="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row md:items-center justify-between group">
+                        <div>
+                            <h3
+                                class="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition duration-300">
+                                Institut Informatika Dan Bisnis Darmajaya</h3>
+                            <p class="text-md text-black font-medium mt-1">Fakultas Ilmu Komputer -
+                                S1 Sistem Informasi</p>
+                            <p class="text-sm text-gray-500 mt-2 max-w-2xl">• Lulus dengan IPK 3.78
+                                <br>
+                                • Penghargaan Dean's List Periode XXVIII. <br>
+                                • Tugas Akhir "Sistem Informasi Geografis Pemetaan Lokasi Pariwisata
+                                di Provinsi Lampung Berbasis Mobile"
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:text-right">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-bold rounded-full border border-gray-200">
+                                2015 - 2019 </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition duration-300 flex flex-col md:flex-row md:items-center justify-between group">
+                        <div>
+                            <h3
+                                class="text-xl font-bold text-gray-900 group-hover:text-gray-700 transition duration-300">
+                                SMA Negeri 4 Bandar Lampung</h3>
+                            <p class="text-md text-gray-600 mt-1">Sekolah Menengah Atas - Ilmu
+                                Pengetahuan Alam
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:text-right">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-bold rounded-full border border-gray-200">
+                                2012 - 2015 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
         <%- include('partials/footer') %>
