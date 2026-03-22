@@ -26,4 +26,8 @@ router.get('/contact', (req, res) => {
     res.render('contact', { title: 'Hubungi Saya' });
 });
 
+// Halaman Sertifikasi
+router.get('/certificates', (req, res) => {
+    res.render('certificates', { title: 'Sertifikasi & Penghargaan' });
+});
 module.exports = router;
