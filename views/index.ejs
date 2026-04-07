@@ -4,27 +4,28 @@
 
         <main class="flex-grow flex items-center justify-center px-4 py-16">
             <div
-                class="text-center p-10 bg-white rounded-2xl shadow-xl max-w-2xl border border-gray-100">
-                <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">
+                class="hero-container text-center p-10 bg-white rounded-2xl shadow-xl max-w-2xl border border-gray-100">
+                <p
+                    class="hero-item text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">
                     Selamat Datang di Personal Website Saya 😁</p>
                 <h1
-                    class="text-4xl md:text-5xl font-extrabold text-black mb-6 tracking-tight leading-tight">
+                    class="hero-item text-4xl md:text-5xl font-extrabold text-black mb-6 tracking-tight leading-tight">
                     Halo, Saya Ady!
                 </h1>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p class="hero-item text-lg text-gray-600 mb-8 leading-relaxed">
                     Menggabungkan pola pikir analitis seorang lulusan Sistem Informasi dengan
                     kekuatan AI. Saya
                     fokus merumuskan logika pemecahan masalah, dan AI menjembatani eksekusinya ke
                     dalam baris
                     kode—mengubah ide menjadi sistem digital yang nyata, efisien, dan siap pakai.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="hero-item flex flex-col sm:flex-row justify-center gap-4">
                     <a href="/projects"
-                        class="bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-md">
+                        class="btn-hover bg-black hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-md">
                         Lihat Karya Saya
                     </a>
                     <a href="/about"
-                        class="bg-white hover:bg-gray-50 text-black border border-gray-300 font-semibold py-3 px-8 rounded-lg transition duration-300">
+                        class="btn-hover bg-white hover:bg-gray-50 text-black border border-gray-300 font-semibold py-3 px-8 rounded-lg transition duration-300">
                         Tentang Diri Saya
                     </a>
                 </div>
@@ -32,7 +33,39 @@
         </main>
 
         <%- include('partials/footer') %>
+            <script>
+                // Pastikan GSAP terdaftar dengan ScrollTrigger
+                gsap.registerPlugin(ScrollTrigger);
 
+                // 1. Animasi untuk Kontainer Utama (muncul dengan skala perlahan)
+                gsap.from(".hero-container", {
+                    opacity: 0,
+                    scale: 0.95,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+
+                // 2. Animasi Staggered untuk teks dan tombol (muncul berurutan dari bawah ke atas)
+                gsap.from(".hero-item", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1,
+                    stagger: 0.2, // Jeda 0.2 detik antar elemen
+                    ease: "power3.out",
+                    delay: 0.3 // Menunggu kontainer utama selesai sedikit
+                });
+
+                // 3. Efek Hover Dinamis dengan GSAP pada Tombol
+                const buttons = document.querySelectorAll('.btn-hover');
+                buttons.forEach(btn => {
+                    btn.addEventListener('mouseenter', () => {
+                        gsap.to(btn, { scale: 1.05, duration: 0.2, ease: "power1.out" });
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        gsap.to(btn, { scale: 1, duration: 0.2, ease: "power1.out" });
+                    });
+                });
+            </script>
             </body>
 
             </html>

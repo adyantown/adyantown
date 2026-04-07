@@ -4,7 +4,7 @@
 
         <main class="flex-grow max-w-6xl mx-auto px-4 py-16 w-full">
 
-            <div class="mb-12 border-b border-gray-200 pb-6 text-center md:text-left">
+            <div class="project-header mb-12 border-b border-gray-200 pb-6 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-tight">
                     Proyek & Karya</h1>
                 <p class="text-lg text-gray-600 max-w-2xl">
@@ -16,7 +16,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div
-                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
                     <div
                         class="h-48 bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors duration-300">
                         <span
@@ -57,7 +57,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
                     <div
                         class="h-48 bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors duration-300">
                         <span
@@ -90,7 +90,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
+                    class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col group">
                     <div
                         class="h-48 bg-black flex items-center justify-center transition-opacity duration-300 group-hover:opacity-90">
                         <span
@@ -125,7 +125,30 @@
         </main>
 
         <%- include('partials/footer') %>
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
 
+                // Animasi Header Halaman Proyek
+                gsap.from(".project-header", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+
+                // Animasi Staggered Grid Cards menggunakan ScrollTrigger
+                gsap.from(".project-card", {
+                    scrollTrigger: {
+                        trigger: ".grid",
+                        start: "top 80%", // Mulai saat elemen grid menyentuh 80% viewport
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.8,
+                    stagger: 0.2, // Efek cascading
+                    ease: "power3.out"
+                });
+            </script>
             </body>
 
             </html>
